@@ -348,8 +348,12 @@
     border: none;
     border-bottom: 2px solid transparent;
     background: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     white-space: nowrap;
     font-family: var(--font-ui);
+    text-decoration: none;
   }
 
   .section-tab {
@@ -532,6 +536,16 @@
     color: var(--on-surface-variant);
     font-family: var(--font-ui);
     font-size: 12px;
+  }
+
+  .team-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.15s ease;
+  }
+
+  .team-link:hover {
+    color: var(--secondary-fixed-dim);
   }
 
   .meta-sep {
@@ -1065,26 +1079,26 @@
 
   <div class="clubs-wrap">
     <div class="clubs-bar" aria-label="Club filter">
-      <button class="club-btn" type="button">Arsenal</button>
-      <button class="club-btn" type="button">Aston Villa</button>
-      <button class="club-btn" type="button">Bournemouth</button>
-      <button class="club-btn" type="button">Brentford</button>
-      <button class="club-btn" type="button">Brighton</button>
-      <button class="club-btn" type="button">Chelsea</button>
-      <button class="club-btn" type="button">Crystal Palace</button>
-      <button class="club-btn" type="button">Everton</button>
-      <button class="club-btn" type="button">Fulham</button>
-      <button class="club-btn" type="button">Ipswich</button>
-      <button class="club-btn" type="button">Leicester</button>
-      <button class="club-btn" type="button">Liverpool</button>
-      <button class="club-btn" type="button">Man City</button>
-      <button class="club-btn" type="button">Man Utd</button>
-      <button class="club-btn" type="button">Newcastle</button>
-      <button class="club-btn" type="button">Nottm Forest</button>
-      <button class="club-btn" type="button">Southampton</button>
-      <button class="club-btn" type="button">Spurs</button>
-      <button class="club-btn" type="button">West Ham</button>
-      <button class="club-btn" type="button">Wolves</button>
+      <a class="club-btn" href="arsenal.html">Arsenal</a>
+      <a class="club-btn" href="aston-villa.html">Aston Villa</a>
+      <a class="club-btn" href="bournemouth.html">Bournemouth</a>
+      <a class="club-btn" href="brentford.html">Brentford</a>
+      <a class="club-btn" href="brighton.html">Brighton</a>
+      <a class="club-btn" href="chelsea.html">Chelsea</a>
+      <a class="club-btn" href="crystal-palace.html">Crystal Palace</a>
+      <a class="club-btn" href="everton.html">Everton</a>
+      <a class="club-btn" href="fulham.html">Fulham</a>
+      <a class="club-btn" href="ipswich.html">Ipswich</a>
+      <a class="club-btn" href="leicester.html">Leicester</a>
+      <a class="club-btn" href="liverpool.html">Liverpool</a>
+      <a class="club-btn" href="man-city.html">Man City</a>
+      <a class="club-btn" href="man-utd.html">Man Utd</a>
+      <a class="club-btn" href="newcastle.html">Newcastle</a>
+      <a class="club-btn" href="nottm-forest.html">Nottm Forest</a>
+      <a class="club-btn" href="southampton.html">Southampton</a>
+      <a class="club-btn" href="spurs.html">Spurs</a>
+      <a class="club-btn" href="west-ham.html">West Ham</a>
+      <a class="club-btn" href="wolves.html">Wolves</a>
     </div>
   </div>
 
@@ -1158,8 +1172,8 @@
         <article class="article-card">
           <div class="article-thumb article-thumb-lg"><div class="placeholder-art small" aria-hidden="true">🔴</div></div>
           <div class="article-body">
-            <div class="tag-pill">Man Utd</div>
-            <div class="card-title">Ten Hag's replacement has been settled for weeks — but why the delay in making it official?</div>
+            <a class="tag-pill team-link" href="man-utd.html">Man Utd</a>
+            <a class="card-title team-link" href="man-utd.html">Ten Hag's replacement has been settled for weeks — but why the delay in making it official?</a>
             <p class="article-dek">The hierarchy at Old Trafford appear to have reached a decision but the announcement remains curiously absent.</p>
             <div class="article-meta"><span class="author">Laurie Whitwell</span><span class="dot">·</span><span>1 hour ago</span></div>
           </div>
@@ -1243,7 +1257,7 @@
         <div class="result-row">
           <div class="result-comp">Premier League · FT</div>
           <div class="result-match">
-            <span class="result-team">Man Utd</span>
+            <a class="result-team team-link" href="man-utd.html">Man Utd</a>
             <span class="result-score">1 – 3</span>
             <span class="result-team right">Everton</span>
           </div>
