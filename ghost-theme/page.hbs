@@ -1,0 +1,19 @@
+{{!< default}}
+{{#post}}
+<main class="main-wrap fade-in">
+  <article class="theme-post-shell theme-post-card {{post_class}}">
+    <header class="theme-post-head">
+      <h1 class="theme-post-title">{{title}}</h1>
+      {{#if excerpt}}
+        <p class="theme-post-excerpt">{{excerpt}}</p>
+      {{/if}}
+    </header>
+
+    <div class="theme-post-body">
+      <section class="gh-content">
+        {{content}}
+      </section>
+    </div>
+  </article>
+</main>
+{{/post}}

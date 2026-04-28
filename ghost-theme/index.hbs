@@ -1,0 +1,43 @@
+{{!< default}}
+<main class="main-wrap fade-in">
+  <section class="theme-post-shell">
+    <div class="section-header">
+      <h1 class="section-title">
+        {{#is "tag"}}
+          {{tag.name}}
+        {{else}}
+          {{#is "author"}}
+            {{author.name}}
+          {{else}}
+            Latest
+          {{/is}}
+        {{/is}}
+      </h1>
+    </div>
+
+    <div class="theme-listing">
+      {{#foreach posts}}
+        <article class="article-card">
+          <div class="article-body">
+            {{#primary_tag}}
+              <div class="tag-pill">{{name}}</div>
+            {{/primary_tag}}
+            <a class="card-title team-link" href="{{url}}">{{title}}</a>
+            {{#if excerpt}}
+              <p class="article-dek">{{excerpt words="32"}}</p>
+            {{/if}}
+            <div class="article-meta">
+              {{#primary_author}}<span class="author">{{name}}</span>{{/primary_author}}
+              <span class="dot">·</span>
+              <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
+            </div>
+          </div>
+        </article>
+      {{/foreach}}
+
+      <div class="theme-pagination">
+        {{pagination}}
+      </div>
+    </div>
+  </section>
+</main>

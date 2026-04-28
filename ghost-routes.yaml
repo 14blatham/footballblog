@@ -1,0 +1,30 @@
+routes:
+  /arsenal/: arsenal
+  /aston-villa/: aston-villa
+  /bournemouth/: bournemouth
+  /brentford/: brentford
+  /brighton/: brighton
+  /chelsea/: chelsea
+  /crystal-palace/: crystal-palace
+  /everton/: everton
+  /fulham/: fulham
+  /ipswich/: ipswich
+  /leicester/: leicester
+  /liverpool/: liverpool
+  /man-city/: man-city
+  /man-utd/: man-utd
+  /newcastle/: newcastle
+  /nottm-forest/: nottm-forest
+  /southampton/: southampton
+  /spurs/: spurs
+  /west-ham/: west-ham
+  /wolves/: wolves
+
+collections:
+  /:
+    permalink: /{slug}/
+    template: index
+
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/
