@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "license": "MIT",
   "author": {
-    "name": "14blatham"
+    "name": "14blatham",
+    "email": "oliver@latham-family.co"
   },
   "config": {
     "posts_per_page": 10,

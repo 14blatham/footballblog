@@ -56,6 +56,26 @@ const convertTeamNav = (markup) =>
 const appendThemeContentStyles = (css) => `
 ${css.trim()}
 
+.kg-width-wide {
+  width: min(1200px, calc(100vw - 48px));
+  max-width: 1200px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.kg-width-full {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.kg-width-wide img,
+.kg-width-full img {
+  width: 100%;
+  height: auto;
+}
+
 .theme-listing {
   padding-top: 8px;
 }
@@ -198,7 +218,15 @@ const buildIndexTemplate = () => `{{!< default}}
   <section class="theme-post-shell">
     <div class="section-header">
       <h1 class="section-title">
-        {{#is "tag"}}{{tag.name}}{{else if "author"}}{{author.name}}{{else}}Latest{{/is}}
+        {{#is "tag"}}
+          {{tag.name}}
+        {{else}}
+          {{#is "author"}}
+            {{primary_author.name}}
+          {{else}}
+            Latest
+          {{/is}}
+        {{/is}}
       </h1>
     </div>
 
@@ -286,7 +314,8 @@ const buildPackageJson = () => JSON.stringify({
   version: "1.0.0",
   license: "MIT",
   author: {
-    name: "14blatham"
+    name: "14blatham",
+    email: "oliver@latham-family.co"
   },
   config: {
     posts_per_page: 10,
