@@ -15,5 +15,5 @@ jobs:
         uses: TryGhost/action-deploy-theme@v1
         with:
           api-url: ${{ secrets.https://open-play.ghost.io }}
-          api-key: ${{ secrets.69f0aa1859ab3400014b0122:294dcd6f4df6db3295ab0578156713a0ddd77d670a69a251efe1d02d999e0009 }}
+          api-key: ${{ secrets.GHOST_ADMIN_API }}
           working-directory: ghost-theme
