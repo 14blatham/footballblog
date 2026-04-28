@@ -5,15 +5,18 @@ on:
     branches:
       - main
       - master
+  workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Deploy Ghost Theme
         uses: TryGhost/action-deploy-theme@v1
         with:
-          api-url: ${{ secrets.GHOST_API_URL }}
-          api-key: ${{ secrets.GHOST_ADMIN_API }}
+          api-url: ${{ secrets.GHOST_ADMIN_API_URL || secrets.GHOST_API_URL }}
+          api-key: ${{ secrets.GHOST_ADMIN_API_KEY || secrets.GHOST_ADMIN_API }}
           working-directory: ghost-theme
